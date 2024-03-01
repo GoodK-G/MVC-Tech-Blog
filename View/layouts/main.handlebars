@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <header>
+        {{#if loggedIn}}
+            <a href="/logout">Logout</a>
+            <a href="/posts">Posts</a>
+            <a href="/profile">Profile</a>
+            <a href="/">Home</a>
+        {{else}}
+            <a href="/login">Login</a>
+            <a href="/signup">Signup</a>
+        {{/if}}
+    </header>
+    <div class="content">
+      {{{body}}}
+    </div>
+
+    {{#if loggedIn}}
+        <footer>
+            <p>Logged in as {{username}}</p>
+        </footer>
+    {{/if}}
+  </body>
+</html>
