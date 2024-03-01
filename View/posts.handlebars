@@ -1,0 +1,18 @@
+<h1>blog posts!</h1>
+<form>
+<div>
+    <input type="text" id="postContent" placeholder="Please make a new post here!">
+</div>
+<div>
+    <button type="submit">New Post</button>
+</div>
+</form>
+
+{{#each posts}}
+    <div>
+        <p>{{blog.postContent}}</p>
+    </div>
+{{/each}}
+```
+
+<script src="/public/post.js"></script>
